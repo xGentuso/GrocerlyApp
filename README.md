@@ -163,6 +163,10 @@ Contributions are welcome! If you'd like to help improve Grocerly, please follow
 
 2. **Clone the Forked Repo**:
 
-   git clone https://github.com/your-username/grocerly.git
+   git clone https://github.com/xGentuso/grocerly.git
 
 ## Contact
+
+- **Project Maintainer**: Ryan Mota
+- **Email**: [ryan.mota@triosstudent.com](mailto:ryan.mota@triosstudent.com)
+- **GitHub**: [xGentuso](https://github.com/xGentuso)
