@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+      {
+          "label": "Composer Install",
+          "type": "shell",
+          "command": "composer install",
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          },
+          "problemMatcher": []
+      },
+      {
+          "label": "Run PHPUnit Tests",
+          "type": "shell",
+          "command": "vendor/bin/phpunit",
+          "group": "test",
+          "problemMatcher": []
+      },
+      {
+          "label": "Start PHP Server",
+          "type": "shell",
+          "command": "php -S localhost:8000 -t public",
+          "group": "build",
+          "isBackground": true,
+          "problemMatcher": []
+      }
+  ]
+}
