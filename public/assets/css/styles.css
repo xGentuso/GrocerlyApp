@@ -1,0 +1,53 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+header ul {
+  list-style-type: none;
+  padding: 0;
+}
+header ul li {
+  display: inline;
+  margin-right: 10px;
+}
+header ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #999;
+}
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+form input[type="text"]
+form input[type="email"]
+form input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

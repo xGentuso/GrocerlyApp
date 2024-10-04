@@ -5,7 +5,7 @@
   <p><?php echo htmlspecialchars($error); ?></p>
 <?php endif; ?>
 
-<form action="/public/index.php?action=login" method="POST">
+<form action="index.php?action=login" method="POST">
   <label for="email">Email:</label>
   <input type="email" name="email" required>
 

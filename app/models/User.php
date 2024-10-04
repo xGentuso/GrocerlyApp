@@ -1,5 +1,5 @@
 <?php 
-  require_once 'grocerly_db.php';
+  require_once __DIR__ . '/../core/grocerly_db.php';
 
   class User {
     private $db;

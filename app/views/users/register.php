@@ -5,7 +5,7 @@
   <p><?php echo htmlspecialchars($error); ?></p>
   <?php endif; ?>
 
-  <form action="/public/index.php?action=register" method="POST">
+  <form action="/grocerly_app/public/index.php?action=register" method="POST">
     <label for="name">Name:</label>
     <input type="text" name="name" required>
 

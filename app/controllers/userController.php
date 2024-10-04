@@ -1,10 +1,11 @@
 <?php
-require_once '../models/User.php';
+
+require_once __DIR__ . '/../models/User.php';
 
 class UserController {
   public function login() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $email = $_POST['email'];
+      $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
       $password = $_POST['password'];
 
       $user = new User();
@@ -28,6 +29,13 @@ class UserController {
       $name = $_POST['name'];
       $email = $_POST['email'];
       $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+      $user = new User();
+      if ($user->getUserByEmail($email)) {
+        $error = "Email already registered.";
+        include '../views/users/register.php';
+        exit();
+      }
 
       $user = new User();
       if ($user->register($name, $email, $password)) {
