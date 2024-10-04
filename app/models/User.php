@@ -11,7 +11,7 @@
 
     public function register($email, $password, $name) {
       $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-      $statement = $this->db->prepare("INSERT INTO Users (email, password, name) VALUE (:email, :password, :name)");
+      $statement = $this->db->prepare("INSERT INTO Users (email, password, name) VALUES (:email, :password, :name)");
       return $statement->execute([
         'email' => $email,
         'password' => $hashedPassword,
@@ -31,14 +31,20 @@
       }
     } 
 
+    public function getUserByEmail($email) {
+      $statement = $this->db->prepare("SELECT * FROM Users WHERE email = :email");
+      $statement->execute(['email' => $email]);
+      return $statement->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function getUserById($userId) {
       $statement = $this->db->prepare("SELECT * FROM Users WHERE user_id = :user_id");
-        $statement->execute(['user_id' => $userId]);
-        return $statement->fetch(PDO::FETCH_ASSOC);
+      $statement->execute(['user_id' => $userId]);
+      return $statement->fetch(PDO::FETCH_ASSOC);
     }
 
     public function updateProfile($userId, $email, $name) {
-      $statement = $this->db->prepare("UPDATE Users SET email = :email, name = :name, WHERE user_id = :user_id");
+      $statement = $this->db->prepare("UPDATE Users SET email = :email, name = :name WHERE user_id = :user_id");
       return $statement->execute([
         'email' => $email,
         'name' => $name,
