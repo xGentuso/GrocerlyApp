@@ -16,7 +16,7 @@ class ShoppingList {
   }
 
   public function createList($userId, $listName) {
-    $statement = $this->db->prepare("INSERT INTO Shopping_Lists (user_id, list_name) VALUES (:user_id, :list_name");
+    $statement = $this->db->prepare("INSERT INTO Shopping_Lists (user_id, list_name) VALUES (:user_id, :list_name)");
     return $statement->execute(['user_id' => $userId, 'list_name' => $listName]);
   }
 

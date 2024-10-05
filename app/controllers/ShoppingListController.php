@@ -9,6 +9,7 @@ class ShoppingListController {
       include '../app/views/shopping_lists/index.php';
     } else {
       header('Location: /Grocerly_app/public/index.php?action=login');
+      exit();
     }
   }
 
