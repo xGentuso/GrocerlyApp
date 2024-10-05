@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../models/User.php';
+require_once '../models/User.php';
 
 class UserController {
   public function login() {
@@ -13,14 +13,14 @@ class UserController {
 
       if ($userInfo && password_verify($password, $userInfo['password'])) {
         $_SESSION['user_id'] = $userInfo['user_id'];
-        header('Location: /index.php?action=profile');
+        header('Location: /Grocerly_app/index.php?action=profile');
         exit();
       } else {
         $error = "Invalid email or password.";
-        include '../views/users/login.php';
+        include '../app/views/users/login.php';
       }
     } else {
-      include '../views/users/login.php';
+      include '../app/views/users/login.php';
     }
   }
 
@@ -33,20 +33,20 @@ class UserController {
       $user = new User();
       if ($user->getUserByEmail($email)) {
         $error = "Email already registered.";
-        include '../views/users/register.php';
+        include '../app/views/users/register.php';
         exit();
       }
 
       $user = new User();
       if ($user->register($name, $email, $password)) {
-        header('Location: /index.php?action=login');
+        header('Location: /Grocerly_app/public/index.php?action=login');
         exit();
       } else {
         $error = "Registration failed. Please try again.";
-        include '../views/users/register.php';
+        include '../app/views/users/register.php';
       }
     } else {
-      include '../views/users/register.php';
+      include '../app/views/users/register.php';
     }
   }
 

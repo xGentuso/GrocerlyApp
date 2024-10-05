@@ -1,11 +1,11 @@
-<?php include '../includes/header.php'; ?>
+<?php include '../app/views/includes/header.php'; ?>
 
 <h2>Register</h2>
 <?php if (isset($error)): ?>
   <p><?php echo htmlspecialchars($error); ?></p>
   <?php endif; ?>
 
-  <form action="/grocerly_app/public/index.php?action=register" method="POST">
+  <form action="/Grocerly_app/public/index.php?action=register" method="POST">
     <label for="name">Name:</label>
     <input type="text" name="name" required>
 
