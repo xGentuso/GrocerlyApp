@@ -60,17 +60,15 @@
 - **Profile Management**: Update personal information and settings easily.
 - **Data Security**: Data encryption to protect your information and privacy.
 
-### 8. Product Scanning (Optional Feature)
+### 8. Recipe Management
 
-- **Barcode Scanning**: Use your device’s camera to scan product barcodes for quick additions.
-- **Instant Info**: Retrieve product information and pricing upon scanning.
-- **Receipt Scanning**: Scan receipts to update budget tracking and purchase history automatically.
+- **Recipe Creation**: Users can create their own recipes with ingredients and instructions.
+- **Recipe Viewing and Deletion**: Users can view and delete recipes from their personal collection.
 
-### 9. Notifications and Reminders
+### 9. Shopping List Management
 
-- **Shopping Reminders**: Set reminders for shopping trips or when items are running low.
-- **Expiration Alerts**: Receive alerts for expiring products to reduce food waste.
-- **Customized Notifications**: Personalize notification preferences for deals and recipes.
+- **Create, Edit, and Delete Lists**: Users can create, edit, and delete shopping lists.
+- **Item Management**: Add, update, or remove items within a shopping list.
 
 ### 10. Budget Tracking
 
@@ -85,11 +83,29 @@
 ### Prerequisites
 
 - **Web Browser**: Latest version of Chrome, Firefox, Safari, or Edge.
-- **Internet Connection**: Required for real-time syncing and data fetching.
+- **Local Development Environment**: PHP, MySQL (or MariaDB), Apache/Nginx (e.g., XAMPP or MAMP).
+- **Composer**: PHP dependency manager.
 
 ### Installation
 
-**COMING SOON**
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/xGentuso/grocerly.git
+   ```
+
+2. **Install Dependencies**:
+   Navigate to the project directory and install dependencies using Composer:
+   ```sh
+   composer install
+   ```
+
+3. **Set Up the Database**:
+   - Import the database schema from `database/schema.sql` into your MySQL server.
+   - Update the database credentials in `config/config.php`.
+
+4. **Run the Application**:
+   - Start your local server (Apache/Nginx).
+   - Navigate to `http://localhost/Grocerly_app/public/` to view the application.
 
 ---
 
@@ -107,30 +123,20 @@
 
 3. **Create a Shopping List**:
 
-   - Add items manually, via voice input, or by scanning barcodes.
+   - Add items manually or via barcode scanning.
    - Organize items into categories if desired.
 
-4. **Collaborate**:
+4. **Manage Recipes**:
 
-   - Share your shopping list with family members or roommates.
-   - Assign items to specific people if needed.
+   - Create new recipes by adding ingredients and instructions.
+   - View your saved recipes and delete them if needed.
 
-5. **Find the Best Deals**:
-
-   - Use the price comparison feature to locate the best prices.
-   - Set preferred stores for personalized deals.
-
-6. **Explore Recipes**:
-
-   - Browse recipe suggestions based on your list.
-   - Add ingredients from recipes directly to your shopping list.
-
-7. **Track Your Budget**:
+5. **Track Your Budget**:
 
    - Set a budget for your shopping trip.
    - Monitor your estimated total as you add items.
 
-8. **Go Shopping**:
+6. **Go Shopping**:
 
    - Use the app in-store to check off items as you shop.
    - Access store maps and get directions if needed.
@@ -140,20 +146,23 @@
 ## Technologies Used
 
 - **Frontend**:
-
-  **COMING SOON**
-
+  - HTML, CSS, JavaScript (React or Angular will be integrated)
+  
 - **Backend**:
-
-  **COMING SOON**
+  - PHP with Model-View-Controller (MVC) architecture
+  
+- **Database**:
+  - MySQL
 
 - **APIs and Libraries**:
-
-  **COMING SOON**
+  - **PHP PDO**: For database interactions
+  - **Composer**: Dependency management
 
 - **Security**:
+  - Data encryption for passwords
+  - User authentication and session handling
 
-  **COMING SOON**
+---
 
 ## Contributing
 
@@ -162,11 +171,36 @@ Contributions are welcome! If you'd like to help improve Grocerly, please follow
 1. **Fork the Repository**: Click on the 'Fork' button at the top right of the repository page.
 
 2. **Clone the Forked Repo**:
-
+   ```sh
    git clone https://github.com/xGentuso/grocerly.git
+   ```
+
+3. **Create a Feature Branch**:
+   ```sh
+   git checkout -b feature-name
+   ```
+
+4. **Commit Your Changes**:
+   ```sh
+   git commit -m "Add feature description"
+   ```
+
+5. **Push to Your Fork**:
+   ```sh
+   git push origin feature-name
+   ```
+
+6. **Open a Pull Request**: Describe your changes and submit for review.
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contact
 
 - **Project Maintainer**: Ryan Mota
 - **Email**: [ryan.mota@triosstudent.com](mailto:ryan.mota@triosstudent.com)
 - **GitHub**: [xGentuso](https://github.com/xGentuso)
+
