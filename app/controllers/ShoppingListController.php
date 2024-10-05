@@ -1,5 +1,5 @@
 <?php
-require_once '../models/ShoppingList.php';
+require_once '../app/models/ShoppingList.php';
 
 class ShoppingListController {
   public function index() {
@@ -18,7 +18,7 @@ class ShoppingListController {
       $listName = $_POST['list_name'];
       $shoppingList = new ShoppingList();
       if ($shoppingList->createList($_SESSION['user_id'], $listName)) {
-        header('Location: /Grocerly_app/public/index.php?acton=home');
+        header('Location: /Grocerly_app/public/index.php?action=home');
         exit();
       } else {
         $error = "Failed to create shopping list. Please try again.";

@@ -18,4 +18,4 @@
     <button type="submit">Register</button>
   </form>
 
-  <?php include '../includes/footer.php'; ?>
+  <?php include '../app/views/includes/footer.php'; ?>

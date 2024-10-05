@@ -15,4 +15,4 @@
     <button type="submit">Login</button>
 </form>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../app/views/includes/footer.php'; ?>

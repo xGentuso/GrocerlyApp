@@ -10,4 +10,4 @@
   <p>You need to <a href="/Grocerly_app/public/index.php?action=login">login</a> to view this page.</p>
 <?php endif; ?>
 
-<?php include '../includes/footer.php'; ?>
+<?php include '../app/views/includes/footer.php'; ?>

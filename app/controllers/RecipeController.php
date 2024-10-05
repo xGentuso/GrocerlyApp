@@ -2,7 +2,7 @@
 
 use LDAP\Result;
 
-require_once '../models/Recipe.php';
+require_once '../app/models/Recipe.php';
 
 class RecipeController {
   public function index() {
@@ -17,7 +17,7 @@ class RecipeController {
   }
 
   public function create() {
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset([$_SESSION['user_id']])) {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SESSION['user_id'])) {
       $recipeName = $_POST['recipe_name'];
       $instructions = $_POST['instructions'];
       $recipe = new Recipe();

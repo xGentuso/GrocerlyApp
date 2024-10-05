@@ -1,6 +1,6 @@
 <?php
 
-require_once '../models/User.php';
+require_once '../app//models/User.php';
 
 class UserController {
   public function login() {
