@@ -83,7 +83,7 @@
 ### Prerequisites
 
 - **Web Browser**: Latest version of Chrome, Firefox, Safari, or Edge.
-- **Local Development Environment**: PHP, MySQL (or MariaDB), Apache/Nginx (e.g., XAMPP or MAMP).
+- **Local Development Environment**: PHP, MariaDB, Apache/Nginx (e.g., XAMPP or MAMP).
 - **Composer**: PHP dependency manager.
 
 ### Installation
@@ -100,7 +100,7 @@
    ```
 
 3. **Set Up the Database**:
-   - Import the database schema from `database/schema.sql` into your MySQL server.
+   - Import the database schema from `database/schema.sql` into your MariaDB server.
    - Update the database credentials in `config/config.php`.
 
 4. **Run the Application**:
@@ -152,7 +152,7 @@
   - PHP with Model-View-Controller (MVC) architecture
   
 - **Database**:
-  - MySQL
+  - MariaDB
 
 - **APIs and Libraries**:
   - **PHP PDO**: For database interactions
@@ -203,4 +203,3 @@ This project is open-source and available under the [MIT License](LICENSE).
 - **Project Maintainer**: Ryan Mota
 - **Email**: [ryan.mota@triosstudent.com](mailto:ryan.mota@triosstudent.com)
 - **GitHub**: [xGentuso](https://github.com/xGentuso)
-
