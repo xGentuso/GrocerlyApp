@@ -1,5 +1,5 @@
 {
-  "php.validate.executablePath": "/usr/bin/php",
+  "php.executablePath": "/opt/homebrew/bin/php",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "junstyle.php-cs-fixer",
   "phpcs.enable": true,
