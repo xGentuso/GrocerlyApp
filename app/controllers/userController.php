@@ -1,11 +1,11 @@
 <?php
-
 require_once '../app/models/User.php';
+
 
 class UserController {
   public function login() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      $email = filter_var($_POST['email']);
+      $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
       $password = $_POST['password'];
 
       $user = new User();
@@ -27,7 +27,7 @@ class UserController {
   public function register() {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       $name = $_POST['name'];
-      $email = $_POST['email'];
+      $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
       $password = $_POST['password'];
   
       $user = new User();
@@ -46,14 +46,14 @@ class UserController {
       include '../app/views/users/register.php';
     }
   }
-  
 
   public function profile() {
     if (isset($_SESSION['user_id'])) {
       $user = new User();
       $userInfo = $user->getUserById($_SESSION['user_id']);
       if ($userInfo) {
-        $user = $userInfo; // Assign user details to use in the view
+        // Assign $userInfo to $user for consistency in the view
+        $user = $userInfo;
         include '../app/views/users/profile.php';
       } else {
         $error = "User not found.";

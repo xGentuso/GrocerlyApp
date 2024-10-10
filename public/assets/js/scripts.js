@@ -1,33 +1,50 @@
+// scripts.js
+
 document.addEventListener('DOMContentLoaded', () => {
-  const passwordField = document.querySelector('input[name="password"]');
-  const strengthIndicator = document.getElementById('password-strength');
+  // Profile Edit Functionality
+  const editProfileButton = document.getElementById('editProfile');
+  const saveProfileButton = document.getElementById('saveProfile');
+  const cancelProfileButton = document.getElementById('cancelProfile');
+  const profileForm = document.getElementById('profileForm');
+  const profileInputs = profileForm.querySelectorAll('input');
 
-  passwordField.addEventListener('input', () => {
-    const value = passwordField.value;
-    let strength = "Weak";
+  if (editProfileButton && saveProfileButton && cancelProfileButton) {
+    editProfileButton.addEventListener('click', () => {
+      profileInputs.forEach(input => input.disabled = false);
+      editProfileButton.classList.add('hidden');
+      saveProfileButton.classList.remove('hidden');
+      cancelProfileButton.classList.remove('hidden');
+    });
 
-    if (value.length > 8 && /[A-Z]/.test(value) && /\d/.test(value) && /[!@#$%^&*]/.test(value)) {
-      strength = "Strong";
-    } else if (value.length > 6 && /[A-Z]/.test(value) && /\d/.test(value)) {
-      strength = "Moderate";
-    }
+    saveProfileButton.addEventListener('click', () => {
+      // Implement AJAX request to save profile
+      // Example:
+      const formData = new FormData(profileForm);
+      fetch('/Grocerly_app/public/index.php?action=update_profile', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.status === 'success') {
+          alert(data.message);
+          profileInputs.forEach(input => input.disabled = true);
+          editProfileButton.classList.remove('hidden');
+          saveProfileButton.classList.add('hidden');
+          cancelProfileButton.classList.add('hidden');
+        } else {
+          alert(data.message);
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('An error occurred while updating your profile.');
+      });
+    });
 
-    strengthIndicator.textContent = `Password Strength: ${strength}`;
-  });
-});
-
-document.addEventListener('DOMConteneLoaded', () => {
-  const editButton = document.getElementById('edit-profile');
-  const saveButton = document.getElementById('save-profule');
-  const formFields = document.querySelectorAll('.profile-container input');
-
-  editButton.addEventListener('click', () => {
-    formFields.forEach(field => field.disabled = false);
-  });
-
-  saveButton.addEventListener('click', () => {
-    formFields.forEach(field => field.disabled = true);
-  });
-
-
+    cancelProfileButton.addEventListener('click', () => {
+      // Reload the page to discard changes
+      location.reload();
+    });
+  }
 });

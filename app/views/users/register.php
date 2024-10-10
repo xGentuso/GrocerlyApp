@@ -14,7 +14,7 @@
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
-    <div id="password-strength"></div>
+    <div id="passwordStrength"></div>
 
     <button type="submit">Register</button>
   </form>

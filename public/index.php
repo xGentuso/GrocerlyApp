@@ -34,12 +34,13 @@ switch ($action) {
     $shoppingListController = new ShoppingListController();
     $shoppingListController->create();
     break;
+  
 
   case 'profile':
     $userController = new UserController();
     $userController->profile();
     break;
-    
+
   case 'home':
   default:
     include '../app/views/home.php';

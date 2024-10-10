@@ -1,106 +1,361 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
+
+/* Header Styles */
 header {
-  background: #333;
-  color: #fff;
-  padding: 10px 0;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+header ul li {
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+  color: #3498db;
+}
+
+/* Hero Section Styles */
+.heroSection {
+  background: url('/Grocerly_app/public/assets/images/heroBackground.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 100px 20px;
   text-align: center;
 }
-header ul {
-  list-style-type: none;
-  padding: 0;
+
+.heroContent h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
 }
-header ul li {
-  display: inline;
-  margin-right: 10px;
+
+.heroContent p {
+  font-size: 20px;
+  margin-bottom: 30px;
 }
-header ul li a {
-  color: #fff;
+
+.ctaButtons a {
   text-decoration: none;
-}
-form {
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px 25px;
   border-radius: 5px;
-  background: #999;
-}
-form label {
-  display: block;
-  margin-bottom: 5px;
-}
-form input[type="text"]
-form input[type="email"]
-form input[type="password"] {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
 }
 
-/* Profile page specific styles */
-.profileContainer {
-  max-width: 600px;
-  margin: 40px auto;
+.btnPrimary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.btnPrimary:hover {
+  background-color: #2980b9;
+}
+
+.btnSecondary {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.btnSecondary:hover {
+  background-color: #27ae60;
+}
+
+/* Features Section Styles */
+.featuresSection {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featuresSection h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.featuresContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.featureItem {
+  background-color: #ffffff;
   padding: 20px;
-  background: #fff;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.profileContainer h2 {
-  margin-top: 0;
+.featureIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
 }
 
-.profileContainer p {
-  margin: 10px 0;
+.featureItem h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-/* editable profile fields and buttons */
+.featureItem p {
+  font-size: 16px;
+  color: #555555;
+}
 
-.editButton, .saveButton, .cancelButton {
-  padding: 8px 12px;
-  margin-top: 10px;
-  color: #fff;
+/* Testimonials Section Styles */
+.testimonialsSection {
+  background-color: #ecf0f1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonialsSection h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.testimonialsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.testimonialItem {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonialItem p {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.testimonialItem h4 {
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* Call-to-Action Section Styles */
+.ctaSection {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ctaSection h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.ctaSection .ctaButtons a {
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btnPrimary {
+  background-color: #3498db;
+  color: #ffffff;
+}
+
+.btnPrimary:hover {
+  background-color: #2980b9;
+}
+
+.btnSecondary {
+  background-color: #2ecc71;
+  color: #ffffff;
+}
+
+.btnSecondary:hover {
+  background-color: #27ae60;
+}
+
+/* Newsletter Signup Section Styles (Optional) */
+.newsletterSection {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.newsletterSection h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.newsletterSection p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.newsletterForm {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.newsletterForm input[type="email"] {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+}
+
+.newsletterForm button {
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
+  background-color: #3498db;
+  color: #ffffff;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-.editButton {
-  background: #4CAF50;
+
+.newsletterForm button:hover {
+  background-color: #2980b9;
 }
-.saveButton {
-  background: #008CBA;
-  display: none;
+
+/* Footer Styles */
+.footerSection {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 0;
 }
-.cancelButton {
-  background: #f44336;
-  margin-left: 10px;
-  display: none;
+
+.footerText {
+  margin: 0;
 }
-.profileContainer input[type="text"] {
-  width: calc(100% - 20px);
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: none;
+
+.footer p {
+  text-align: center;
 }
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+
+.logoutLink {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logoutLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featuresContainer,
+  .testimonialsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featureItem,
+  .testimonialItem {
+    width: 80%;
+  }
+
+  .heroContent h1 {
+    font-size: 36px;
+  }
+
+  .heroContent p {
+    font-size: 18px;
+  }
+
+  .featuresSection h2,
+  .testimonialsSection h2,
+  .ctaSection h2,
+  .newsletterSection h2 {
+    font-size: 28px;
+  }
+
+  .ctaButtons a {
+    margin: 10px 0;
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletterForm input[type="email"],
+  .newsletterForm button {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Profile Page Responsive */
+  .profileContainer {
+    padding: 20px;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .buttonGroup .btnDanger {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Utility Classes */
+.textCenter {
+  text-align: center;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+/* Global Box-Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
