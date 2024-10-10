@@ -1,18 +1,18 @@
-<?php include '../app/views/includes/header.php' ?>
+<?php include '../app/views/includes/header.php'; ?>
 
 <h2>Login</h2>
 <?php if (isset($error)): ?>
-  <p><?php echo htmlspecialchars($error); ?></p>
+  <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
 <?php endif; ?>
 
-<form action="/Grocerly/public/index.php?action=login" method="POST">
+<form action="/Grocerly_app/public/index.php?action=login" method="POST">
   <label for="email">Email:</label>
-  <input type="email" name="email" required>
+  <input type="email" name="email" id="email" required>
 
   <label for="password">Password:</label>
-    <input type="password" name="password" required>
+  <input type="password" name="password" id="password" required>
 
-    <button type="submit">Login</button>
+  <button type="submit">Login</button>
 </form>
 
 <?php include '../app/views/includes/footer.php'; ?>

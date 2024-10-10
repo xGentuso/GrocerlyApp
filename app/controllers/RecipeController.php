@@ -1,7 +1,5 @@
 <?php
 
-use LDAP\Result;
-
 require_once '../app/models/Recipe.php';
 
 class RecipeController {

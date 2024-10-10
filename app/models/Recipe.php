@@ -24,7 +24,7 @@ class Recipe {
   public function createRecipe($userId, $recipeName, $instructions) {
     $statement = $this->db->prepare("INSERT INTO Recipes (user_id, recipe_name, instructions, created_by)
      VALUES (:user_id, :recipe_name, :instructions, :created_by)");
-    return $statement->execute([
+      return $statement->execute([
       'recipe_name' => $recipeName,
       'instructions' => $instructions,
       'created_by' => $userId

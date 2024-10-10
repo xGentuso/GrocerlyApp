@@ -10,6 +10,7 @@
   <ul>
     <li><a href="/Grocerly_app/public/index.php?action=register">Register</a> if you don't already have an account.</li>
     <li><a href="/Grocerly_app/public/index.php?action=login">Login</a> if you already have an account.</li>
+    
   </ul>
 </div>
 
