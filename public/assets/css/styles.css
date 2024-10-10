@@ -53,7 +53,7 @@ form button {
 }
 
 /* Profile page specific styles */
-.profile-container {
+.profileContainer {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
@@ -62,10 +62,45 @@ form button {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.profile-container h2 {
+.profileContainer h2 {
   margin-top: 0;
 }
 
-.profile-container p {
+.profileContainer p {
   margin: 10px 0;
+}
+
+/* editable profile fields and buttons */
+
+.editButton, .saveButton, .cancelButton {
+  padding: 8px 12px;
+  margin-top: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editButton {
+  background: #4CAF50;
+}
+.saveButton {
+  background: #008CBA;
+  display: none;
+}
+.cancelButton {
+  background: #f44336;
+  margin-left: 10px;
+  display: none;
+}
+.profileContainer input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: none;
+}
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
 }

@@ -15,3 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
     strengthIndicator.textContent = `Password Strength: ${strength}`;
   });
 });
+
+document.addEventListener('DOMConteneLoaded', () => {
+  const editButton = document.getElementById('edit-profile');
+  const saveButton = document.getElementById('save-profule');
+  const formFields = document.querySelectorAll('.profile-container input');
+
+  editButton.addEventListener('click', () => {
+    formFields.forEach(field => field.disabled = false);
+  });
+
+  saveButton.addEventListener('click', () => {
+    formFields.forEach(field => field.disabled = true);
+  });
+
+
+});
