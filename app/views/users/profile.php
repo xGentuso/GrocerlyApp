@@ -1,7 +1,7 @@
 <?php include '../app/views/includes/header.php'; ?>
 
 <div class="profileContainer">
-  <?php if (isset($_SESSION['user_id'])): ?>
+  <?php if  (isset($_SESSION['user_id'])): ?>
     <h2 class="textCenter">Profile</h2>
     <form id="profileForm">
       <label for="name">Name:</label>

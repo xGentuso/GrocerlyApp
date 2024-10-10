@@ -1,361 +1,621 @@
-/* General Styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-/* Header Styles */
-header {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  padding: 15px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-header nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-header ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-header ul li {
-  margin: 0 15px;
-}
-
-header ul li a {
-  color: #ecf0f1;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-header ul li a:hover {
-  color: #3498db;
-}
-
-/* Hero Section Styles */
-.heroSection {
-  background: url('/Grocerly_app/public/assets/images/heroBackground.jpg') no-repeat center center/cover;
-  color: #ffffff;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.heroContent h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.heroContent p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.ctaButtons a {
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
-}
-
-.btnPrimary {
-  background-color: #3498db;
-  color: #ffffff;
-}
-
-.btnPrimary:hover {
-  background-color: #2980b9;
-}
-
-.btnSecondary {
-  background-color: #2ecc71;
-  color: #ffffff;
-}
-
-.btnSecondary:hover {
-  background-color: #27ae60;
-}
-
-/* Features Section Styles */
-.featuresSection {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.featuresSection h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.featuresContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.featureItem {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.featureIcon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.featureItem h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.featureItem p {
-  font-size: 16px;
-  color: #555555;
-}
-
-/* Testimonials Section Styles */
-.testimonialsSection {
-  background-color: #ecf0f1;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.testimonialsSection h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-}
-
-.testimonialsContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.testimonialItem {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.testimonialItem p {
-  font-size: 16px;
-  color: #555555;
-  margin-bottom: 15px;
-}
-
-.testimonialItem h4 {
-  font-size: 18px;
-  color: #2c3e50;
-}
-
-/* Call-to-Action Section Styles */
-.ctaSection {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.ctaSection h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.ctaSection p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.ctaSection .ctaButtons a {
-  text-decoration: none;
-  padding: 12px 25px;
-  border-radius: 5px;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
-}
-
-.btnPrimary {
-  background-color: #3498db;
-  color: #ffffff;
-}
-
-.btnPrimary:hover {
-  background-color: #2980b9;
-}
-
-.btnSecondary {
-  background-color: #2ecc71;
-  color: #ffffff;
-}
-
-.btnSecondary:hover {
-  background-color: #27ae60;
-}
-
-/* Newsletter Signup Section Styles (Optional) */
-.newsletterSection {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
-.newsletterSection h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.newsletterSection p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.newsletterForm {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.newsletterForm input[type="email"] {
-  padding: 10px;
-  width: 300px;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-}
-
-.newsletterForm button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #3498db;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.newsletterForm button:hover {
-  background-color: #2980b9;
-}
-
-/* Footer Styles */
-.footerSection {
-  background-color: #2c3e50;
-  color: #ecf0f1;
-  text-align: center;
-  padding: 20px 0;
-}
-
-.footerText {
-  margin: 0;
-}
-
-.footer p {
-  text-align: center;
-}
-
-.logoutLink {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  color: #e74c3c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.logoutLink:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .featuresContainer,
-  .testimonialsContainer {
-    flex-direction: column;
-    align-items: center;
+/* =========================================
+   General Styles
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  .featureItem,
-  .testimonialItem {
-    width: 80%;
-  }
-
-  .heroContent h1 {
-    font-size: 36px;
-  }
-
-  .heroContent p {
-    font-size: 18px;
-  }
-
-  .featuresSection h2,
-  .testimonialsSection h2,
-  .ctaSection h2,
-  .newsletterSection h2 {
-    font-size: 28px;
-  }
-
-  .ctaButtons a {
-    margin: 10px 0;
-  }
-
-  .newsletterForm {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .newsletterForm input[type="email"],
-  .newsletterForm button {
+  
+  body {
     width: 100%;
-    max-width: 300px;
+    overflow-x: hidden; /* prevents horizontal scroll if any element overflows */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
   }
-
-  /* Profile Page Responsive */
-  .profileContainer {
+  
+  /* Utility Classes */
+  .mb10 {
+    margin-bottom: 10px;
+  }
+  
+  .mt20 {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* =========================================
+     Header Styles
+     ========================================= */
+  header {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 15px 0; /* Adjust as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header nav {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  header ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  header ul li {
+    margin: 0 15px;
+  }
+  
+  header ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  header ul li a:hover {
+    color: #3498db;
+  }
+  
+  /* =========================================
+     Hero Section Styles
+     ========================================= */
+  .heroSection {
+    width: 100%;
+    background: url('/Grocerly_app/public/assets/images/heroBackground.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 100px 0; /* removed horizontal padding */
+    text-align: center;
+  }
+  
+  .heroContent h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .heroContent p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .ctaButtons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnPrimary {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .btnPrimary:hover {
+    background-color: #2980b9;
+  }
+  
+  .btnSecondary {
+    background-color: #2ecc71;
+    color: #ffffff;
+  }
+  
+  .btnSecondary:hover {
+    background-color: #27ae60;
+  }
+  
+  /* =========================================
+     Features Section Styles
+     ========================================= */
+  .featuresSection {
+    width: 100%;
+    padding: 60px 0; /* Removed horizontal padding */
+    text-align: center;
+  }
+  
+  .featuresSection h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .featuresContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .featureItem {
+    width: 100%;
+    max-width: 300px; /* limits width on larger screens */
+    background-color: #ffffff;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-
-  .buttonGroup {
+  
+  .featureIcon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .featureItem h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  
+  .featureItem p {
+    font-size: 16px;
+    color: #555555;
+  }
+  
+  /* =========================================
+     Testimonials Section Styles
+     ========================================= */
+  .testimonialsSection {
+    width: 100%;
+    background-color: #ecf0f1;
+    padding: 60px 0; /* removed horizontal padding */
+    text-align: center;
+  }
+  
+  .testimonialsSection h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .testimonialsContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .testimonialItem {
+    width: 100%;
+    max-width: 300px; /* limits width on larger screens */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonialItem p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 15px;
+  }
+  
+  .testimonialItem h4 {
+    font-size: 18px;
+    color: #2c3e50;
+  }
+  
+  /* =========================================
+     Call-to-Action Section Styles
+     ========================================= */
+  .ctaSection {
+    width: 100%;
+    padding: 60px 0; /* removed horizontal padding */
+    text-align: center;
+  }
+  
+  .ctaSection h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .ctaSection p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .ctaSection .ctaButtons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* =========================================
+     Newsletter Signup Section Styles
+     ========================================= */
+  .newsletterSection {
+    width: 100%;
+    padding: 60px 0; /* removed horizontal padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+  }
+  
+  .newsletterSection h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .newsletterSection p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  .newsletterContainer {
+    width: 100%;
+    padding: 0 20px; 
+  }
+  
+  .newsletterForm {
+    width: 100%;
+    max-width: 600px; 
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+  }
+  
+  .newsletterForm input[type="email"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+  
+  .newsletterForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletterForm button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* =========================================
+     Footer Styles
+     ========================================= */
+  .footerSection {
+    width: 100%;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 10px 0; /* Reduced padding */
+  }
+  
+  .footerText {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Social Links Styles */
+  .socialLinks {
+    margin-top: 15px;
+  }
+  
+  .socialLink {
+    color: #ecf0f1;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .socialLink:hover {
+    color: #3498db;
+  }
+  
+  /* =========================================
+     Logout Link Styles
+     ========================================= */
+  .logoutLink {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .logoutLink:hover {
+    text-decoration: underline;
+  }
+  
+  /* =========================================
+     Profile Page Styles
+     ========================================= */
+  .profileContainer {
+    width: 100%;
+    max-width: 700px; 
+    margin: 50px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .textCenter {
+    text-align: center;
+    color: #2c3e50;
+  }
+  
+  form {
+    display: flex;
     flex-direction: column;
   }
-
-  .buttonGroup .btnDanger {
-    margin-left: 0;
-    margin-top: 10px;
+  
+  form label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
   }
-}
-
-/* Utility Classes */
-.textCenter {
-  text-align: center;
-}
-
-.mb10 {
-  margin-bottom: 10px;
-}
-
-.mt20 {
-  margin-top: 20px;
-}
-
-/* Global Box-Sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+  
+  form input[type="text"],
+  form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background-color: #ecf0f1;
+  }
+  
+  form input[type="text"]:disabled,
+  form input[type="email"]:disabled {
+    background-color: #ecf0f1;
+  }
+  
+  /* Button Group */
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnSecondary {
+    background-color: #2ecc71;
+    color: #ffffff;
+  }
+  
+  .btnSecondary:hover {
+    background-color: #27ae60;
+  }
+  
+  .btnPrimary {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .btnPrimary:hover {
+    background-color: #2980b9;
+  }
+  
+  .btnDanger {
+    background-color: #e74c3c;
+    color: #ffffff;
+    margin-left: 10px;
+  }
+  
+  .btnDanger:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Error Message Styles */
+  .errorMessage {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* =========================================
+     Login Page Styles
+     ========================================= */
+  .loginContainer {
+    width: 100%;
+    max-width: 400px; 
+    margin: 50px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .loginForm {
+    margin-top: 20px;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .formGroup input[type="email"],
+  .formGroup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: #ecf0f1;
+  }
+  
+  .formGroup input[type="email"]:focus,
+  .formGroup input[type="password"]:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #ffffff;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .buttonGroup .btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnPrimary {
+    background-color: #3498db;
+    color: #ffffff;
+  }
+  
+  .btnPrimary:hover {
+    background-color: #2980b9;
+  }
+  
+  .btnSecondary {
+    background-color: #2ecc71;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .btnSecondary:hover {
+    background-color: #27ae60;
+  }
+  
+  .forgotPassword {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .forgotPassword a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .forgotPassword a:hover {
+    text-decoration: underline;
+  }
+  
+  /* =========================================
+     Responsive Design Enhancements
+     ========================================= */
+  @media (max-width: 768px) {
+    .featuresContainer,
+    .testimonialsContainer {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .featureItem,
+    .testimonialItem {
+      width: 80%; /* adjusted from fixed width to percentage */
+      max-width: 300px; 
+    }
+  
+    .heroContent h1 {
+      font-size: 36px;
+    }
+  
+    .heroContent p {
+      font-size: 18px;
+    }
+  
+    .featuresSection h2,
+    .testimonialsSection h2,
+    .ctaSection h2,
+    .newsletterSection h2,
+    .loginContainer h2 {
+      font-size: 28px;
+    }
+  
+    .ctaButtons a {
+      margin: 10px 0;
+    }
+  
+    .newsletterForm {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .newsletterForm input[type="email"],
+    .newsletterForm button {
+      width: 100%;
+      max-width: none;
+    }
+  
+    .newsletterForm input[type="email"] {
+      margin-bottom: 10px;
+    }
+  
+    /* Profile Page Responsive */
+    .profileContainer {
+      padding: 20px;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .buttonGroup .btnDanger {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    /* Login Page Responsive */
+    .loginContainer {
+      margin: 20px 0;
+      padding: 20px;
+      max-width: none; /* allows full width on smaller screens */
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .buttonGroup .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .buttonGroup .btn:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
