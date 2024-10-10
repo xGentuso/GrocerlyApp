@@ -81,11 +81,13 @@
   }
   
   .heroContent h1 {
+    color: #3498db;
     font-size: 48px;
     margin-bottom: 20px;
   }
   
   .heroContent p {
+    color: #333;
     font-size: 20px;
     margin-bottom: 30px;
   }
