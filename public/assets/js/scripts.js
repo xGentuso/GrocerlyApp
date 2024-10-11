@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const formData = new FormData(profileForm);
 
       // Send AJAX request to update profile
-      fetch('/Grocerly_app/public/index.php?action=update_profile', {
+      fetch('/GrocerlyApp/public/index.php?action=update_profile', {
         method: 'POST',
         body: formData
       })

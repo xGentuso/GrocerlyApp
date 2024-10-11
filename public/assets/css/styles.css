@@ -8,12 +8,10 @@
   }
   
   body {
-    width: 100%;
-    overflow-x: hidden; /* prevents horizontal scroll if any element overflows */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default body margins */
+    background-color: #f0f0f0; /* Optional: Background color for contrast */
   }
   
   /* Utility Classes */
@@ -257,12 +255,12 @@
   
   .newsletterContainer {
     width: 100%;
-    padding: 0 20px; 
+    padding: 0 20px;
   }
   
   .newsletterForm {
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -345,7 +343,7 @@
      ========================================= */
   .profileContainer {
     width: 100%;
-    max-width: 700px; 
+    max-width: 700px;
     margin: 50px 0;
     padding: 30px;
     background-color: #ffffff;
@@ -444,8 +442,8 @@
      ========================================= */
   .loginContainer {
     width: 100%;
-    max-width: 400px; 
-    margin: 50px 0;
+    max-width: 400px;
+    margin: 50px auto; /* Centers horizontally */
     padding: 30px;
     background-color: #ffffff;
     border-radius: 10px;
@@ -468,7 +466,8 @@
   }
   
   .formGroup input[type="email"],
-  .formGroup input[type="password"] {
+  .formGroup input[type="password"],
+  .formGroup input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #bdc3c7;
@@ -477,7 +476,8 @@
   }
   
   .formGroup input[type="email"]:focus,
-  .formGroup input[type="password"]:focus {
+  .formGroup input[type="password"]:focus,
+  .formGroup input[type="text"]:focus {
     outline: none;
     border-color: #3498db;
     background-color: #ffffff;
@@ -536,6 +536,19 @@
   }
   
   /* =========================================
+     Register Container Styles
+     ========================================= */
+  .registerContainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* Centers horizontally */
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* =========================================
      Responsive Design Enhancements
      ========================================= */
   @media (max-width: 768px) {
@@ -548,7 +561,7 @@
     .featureItem,
     .testimonialItem {
       width: 80%; /* adjusted from fixed width to percentage */
-      max-width: 300px; 
+      max-width: 300px;
     }
   
     .heroContent h1 {
@@ -563,7 +576,8 @@
     .testimonialsSection h2,
     .ctaSection h2,
     .newsletterSection h2,
-    .loginContainer h2 {
+    .loginContainer h2,
+    .registerContainer h2 {
       font-size: 28px;
     }
   
@@ -600,11 +614,12 @@
       margin-top: 10px;
     }
   
-    /* Login Page Responsive */
-    .loginContainer {
+    /* Login and Register Page Responsive */
+    .loginContainer,
+    .registerContainer {
       margin: 20px 0;
       padding: 20px;
-      max-width: none; /* allows full width on smaller screens */
+      max-width: 90%; /* allows full width on smaller screens */
     }
   
     .buttonGroup {
