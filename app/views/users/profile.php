@@ -18,7 +18,7 @@
     </form>
     <a href="/Grocerly_app/public/index.php?action=logout" class="logoutLink">Logout</a>
   <?php else: ?>
-    <p>You need to <a href="/Grocerly_app/public/index.php?action=login">Login</a></p>
+    <p>You need to <a href="/GrocerlyApp/public/index.php?action=login">Login</a></p>
   <?php endif; ?>
 </div>
 

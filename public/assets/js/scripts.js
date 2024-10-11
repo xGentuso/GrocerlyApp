@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Send AJAX request to subscribe
-        fetch('/Grocerly_app/public/index.php?action=subscribe_newsletter', {
+        fetch('/GrocerlyApp/public/index.php?action=subscribe_newsletter', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'

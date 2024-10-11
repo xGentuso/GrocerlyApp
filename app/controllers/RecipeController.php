@@ -9,7 +9,7 @@ class RecipeController {
       $recipes = $recipe->getAllRecipes();
       include '../app/views/recipes/index.php';
     } else {
-      header('Location: /Grocerly_app/public/index.php?action=login');
+      header('Location: /GrocerlyApp/public/index.php?action=login');
       exit();
     }
   }
@@ -20,7 +20,7 @@ class RecipeController {
       $instructions = $_POST['instructions'];
       $recipe = new Recipe();
       if ($recipe->createRecipe($_SESSION['user_id'], $recipeName, $instructions)) {
-        header('Location: /Grocerly_app/public/index.php?action=home');
+        header('Location: /GrocerlyApp/public/index.php?action=home');
         exit();
       } else {
         $error = "Failed to create recipe. Please try again.";
@@ -43,7 +43,7 @@ class RecipeController {
         include '../app/views/recipes/index.php';
       }
     } else {
-      header('Location: /Grocerly_app/public/index.php?action=login');
+      header('Location: /GrocerlyApp/public/index.php?action=login');
       exit();
     }
   }
@@ -54,14 +54,14 @@ class RecipeController {
       $recipeId = $_POST['recipe_id'];
       $recipe = new Recipe();
       if ($recipe->deleteRecipe($recipeId)) {
-        header('Location: /Grocerly_app/public/index.php?action=home');
+        header('Location: /GrocerlyApp/public/index.php?action=home');
         exit();
       } else {
         $error = "Failed to delete the recipe. Please try again.";
         include '../app/views/recipes/index.php';
       }
     } else {
-      header('Location: /Grocerly_app/public/index.php?action=home');
+      header('Location: /GrocerlyApp/public/index.php?action=home');
       exit();
     }
   }

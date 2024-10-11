@@ -9,7 +9,7 @@
     </div>
   <?php endif; ?>
   
-  <form class="loginForm" action="/Grocerly_app/public/index.php?action=login" method="POST">
+  <form class="loginForm" action="/GrocerlyApp/public/index.php?action=login" method="POST">
     <div class="formGroup">
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -22,12 +22,12 @@
     
     <div class="buttonGroup">
       <button type="submit" class="btn btnPrimary">Login</button>
-      <a href="/Grocerly_app/public/index.php?action=register" class="btn btnSecondary">Register</a>
+      <a href="/GrocerlyApp/public/index.php?action=register" class="btn btnSecondary">Register</a>
     </div>
   </form>
   
   <div class="forgotPassword">
-    <a href="/Grocerly_app/public/index.php?action=forgot_password">Forgot your password?</a>
+    <a href="/GrocerlyApp/public/index.php?action=forgot_password">Forgot your password?</a>
   </div>
 </div>
 

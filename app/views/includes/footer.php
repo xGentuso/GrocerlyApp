@@ -8,6 +8,6 @@
     <a href="#" class="socialLink" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
   </div>
 </footer>
-<script src="/Grocerly_app/public/assets/js/scripts.js"></script>
+<script src="/GrocerlyApp/public/assets/js/scripts.js"></script>
 </body>
 </html>

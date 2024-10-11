@@ -6,13 +6,13 @@
     <?php foreach ($recipes as $recipe): ?>
       <li>
         <?php echo htmlspecialchars($recipes['recipes_name']); ?>
-        <a href="/Grocerly_app/public/index.php?action=view_recipe&recipes_id=<?php echo $recipe['recipe_id']; ?>">View</a>
-        <a href="/Grocerly_app/public/index.php?action=delete_recipe&recipe_id=<?php echo $recipe['recipe_id']; ?>">Delete</a>
+        <a href="/GrocerlyApp/public/index.php?action=view_recipe&recipes_id=<?php echo $recipe['recipe_id']; ?>">View</a>
+        <a href="/GrocerlyApp/public/index.php?action=delete_recipe&recipe_id=<?php echo $recipe['recipe_id']; ?>">Delete</a>
       </li>
       <?php endforeach; ?>
   </ul>
   <?php else: ?>
-    <p>No recipes found. <a href="/Grocerly_app/public/index.php?action=create_recipe">Create one now!</a></p>
+    <p>No recipes found. <a href="/GrocerlyApp/public/index.php?action=create_recipe">Create one now!</a></p>
     <?php endif; ?>
 
     <?php include '../includes/footer.php';

@@ -13,7 +13,7 @@ class UserController {
 
       if ($userInfo && password_verify($password, $userInfo['password'])) {
         $_SESSION['user_id'] = $userInfo['user_id'];
-        header('Location: /Grocerly_app/public/index.php?action=profile');
+        header('Location: /GrocerlyApp/public/index.php?action=profile');
         exit();
       } else {
         $error = "Invalid email or password.";
@@ -34,7 +34,7 @@ class UserController {
       try {
         // Call the updated register method from the model
         if ($user->register($email, $password, $name)) {
-          header('Location: /Grocerly_app/public/index.php?action=login');
+          header('Location: /GrocerlyApp/public/index.php?action=login');
           exit();
         }
       } catch (Exception $e) {
@@ -60,7 +60,7 @@ class UserController {
         include '../app/views/users/login.php';
       }
     } else {
-      header('Location: /Grocerly_app/public/index.php?action=login');
+      header('Location: /GrocerlyApp/public/index.php?action=login');
       exit();
     }
   }

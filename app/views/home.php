@@ -6,8 +6,8 @@
     <h1>Welcome to Grocerly!</h1>
     <p>Your all-in-one grocery management app. Simplify your shopping, budgeting, and recipe planning effortlessly.</p>
     <div class="ctaButtons">
-      <a href="/Grocerly_app/public/index.php?action=register" class="btnPrimary">Get Started</a>
-      <a href="/Grocerly_app/public/index.php?action=login" class="btnSecondary">Login</a>
+      <a href="/GrocerlyApp/public/index.php?action=register" class="btnPrimary">Get Started</a>
+      <a href="/GrocerlyApp/public/index.php?action=login" class="btnSecondary">Login</a>
     </div>
   </div>
 </section>
@@ -58,8 +58,8 @@
   <h2>Ready to Get Started?</h2>
   <p>Join thousands of satisfied users who have streamlined their grocery management with Grocerly.</p>
   <div class="ctaButtons">
-    <a href="/Grocerly_app/public/index.php?action=register" class="btnPrimary">Register Now</a>
-    <a href="/Grocerly_app/public/index.php?action=login" class="btnSecondary">Login</a>
+    <a href="/GrocerlyApp/public/index.php?action=register" class="btnPrimary">Register Now</a>
+    <a href="/GrocerlyApp/public/index.php?action=login" class="btnSecondary">Login</a>
   </div>
 </section>
 

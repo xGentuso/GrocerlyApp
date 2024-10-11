@@ -5,7 +5,7 @@
   <p><?php echo htmlspecialchars($error); ?></p>
 <?php endif; ?>
 
-<form action="/Grocerly_app/public/index.php?action=create_recipe" method="POST">
+<form action="/GrocerlyApp/public/index.php?action=create_recipe" method="POST">
   <label for="recipe_name">Recipe Name:</label>
   <input type="text" name="recipe_name" required>
 
