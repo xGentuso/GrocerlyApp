@@ -21,13 +21,13 @@ class Notification {
     }
 
     public function getAllNotifications() {
-        $statment = $this->db->query("SELECT * FROM Notifications");
-        return $statment->fetchAll(PDO::FETCH_ASSOC);
+        $statement = $this->db->query("SELECT * FROM Notifications");
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function deleteANotifications($user_id) {
-        $statment = $this->db->prepare("DELETE FROM Notifications WHERE user_id = :user_id");
-        return $statment->execute(['user_id' => $user_id]);
+        $statement = $this->db->prepare("DELETE FROM Notifications WHERE user_id = :user_id");
+        return $statement->execute(['user_id' => $user_id]);
     }
 }
 ?>
